@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/HeaderX.jsx";
 
 import "./Login.css"; // CSS separado
 
 const Login = () => {
+  const navigate = useNavigate();
+  
+  function handleRegister() {
+    navigate('/cadastro')
+  }
+  
+
   const [tipoUsuario, setTipoUsuario] = useState("cliente");
 
   return (
@@ -32,18 +40,20 @@ const Login = () => {
         </div>
 
         <form className="login-form">
-          <p>seu nome</p>
+          <p>Seu Nome</p>
           <input type="text" placeholder="" />
-          <p>email</p>
+          <p>Email</p>
           <input type="email" placeholder="" />
-          <p>senha</p>
+          <p>Senha</p>
           <input type="password" placeholder="" />
           <button type="submit" className="login-btn">LOGIN</button>
         </form>
 
         <p className="login-footer">
           Não tem conta?{" "}
-          <Link to="/cadastro" className="cadastro-link">Cadastre</Link>
+          {/* <Link to="/cadastro" className="cadastro-link">Cadastre</Link> */}
+          <button className="register-button" onClick={handleRegister}>Cadastro</button>
+
         </p>
       </div>
     </div>

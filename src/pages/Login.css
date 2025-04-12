@@ -101,15 +101,21 @@ body {
     margin-top: 20px;
     font-size: 14px;
   }
-  
-  .cadastro-link {
-    background: white;
-    color: #15803d;
-    padding: 4px 12px;
+ 
+   .register-button{
+    background: #15803d;
+    color: white;
+    padding: 8px 12px;
     border-radius: 999px;
+    border: none;
     font-weight: bold;
     text-decoration: none;
     margin-left: 5px;
     display: inline-block;
+  }
+
+  .register-button:hover{
+    background:white ;
+    color:#15803d;
   }
   
